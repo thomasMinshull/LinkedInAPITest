@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cV3-oJ-av2">
+                                <rect key="frame" x="90" y="307" width="142" height="30"/>
+                                <state key="normal" title="open Martin's Profile"/>
+                                <state key="disabled">
+                                    <color key="titleColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="martinButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="gs3-zi-6Gc"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6AO-8E-Sb0">
+                                <rect key="frame" x="107" y="269" width="107" height="30"/>
+                                <state key="normal" title="open my profile"/>
+                                <state key="disabled">
+                                    <color key="titleColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="myButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="JCe-wb-21L"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yx9-7p-188">
+                                <rect key="frame" x="102" y="231" width="117" height="30"/>
+                                <state key="normal" title="get Profile Image"/>
+                                <connections>
+                                    <action selector="profilePicButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="0ku-kz-7oG"/>
+                                </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ZvI-Ha-Rx4">
+                                <rect key="frame" x="37" y="28" width="248" height="195"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="6AO-8E-Sb0" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="6lp-NW-DiA"/>
+                            <constraint firstItem="6AO-8E-Sb0" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="74s-wJ-t5y"/>
+                            <constraint firstItem="ZvI-Ha-Rx4" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" id="J26-HT-B2O"/>
+                            <constraint firstItem="cV3-oJ-av2" firstAttribute="top" secondItem="6AO-8E-Sb0" secondAttribute="bottom" constant="8" id="LBe-ad-Z84"/>
+                            <constraint firstItem="ZvI-Ha-Rx4" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="21" id="NAc-mk-8Xw"/>
+                            <constraint firstItem="yx9-7p-188" firstAttribute="top" secondItem="ZvI-Ha-Rx4" secondAttribute="bottom" constant="8" id="bJ1-YH-4YD"/>
+                            <constraint firstItem="cV3-oJ-av2" firstAttribute="centerX" secondItem="6AO-8E-Sb0" secondAttribute="centerX" id="bp4-t0-nNw"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="ZvI-Ha-Rx4" secondAttribute="trailing" constant="19" id="cb4-6k-HAg"/>
+                            <constraint firstItem="yx9-7p-188" firstAttribute="centerX" secondItem="6AO-8E-Sb0" secondAttribute="centerX" id="jUp-l9-ah0"/>
+                            <constraint firstItem="6AO-8E-Sb0" firstAttribute="top" secondItem="yx9-7p-188" secondAttribute="bottom" constant="8" id="p8x-k8-wPb"/>
+                        </constraints>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <connections>
+                        <outlet property="MartinButton" destination="cV3-oJ-av2" id="tWj-El-VJg"/>
+                        <outlet property="meButton" destination="6AO-8E-Sb0" id="8bA-Ui-vOW"/>
+                        <outlet property="profilePicImageView" destination="ZvI-Ha-Rx4" id="yyz-uH-SEu"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="161" y="296"/>
+        </scene>
+    </scenes>
+</document>
